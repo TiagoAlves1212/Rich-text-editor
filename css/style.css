@@ -33,7 +33,7 @@ body {
     box-shadow: 2px 4px 8px rgb(106, 12, 12);
 }
 
-.too-btn {
+.too-btn, .btn-bold, .btn-italic, .btn-underline {
     display: block;
     padding: 5px;
     border: none;
@@ -50,13 +50,30 @@ body {
     transform: scale(1.05);
     background-color: rgb(192, 19, 19);
 }
+:where(.btn-bold, .btn-italic, .btn-underline):hover {
+    transform: scale(1.05);
+    background-color: rgb(192, 19, 19);
+}
 
 #output {
     height: 400px;
-    padding: 1rem;
+    padding: 1.5rem 2.5rem;
     border: 1px solid #e91f1f;
     border-radius: 5px;
     background-color: #2b2626;
     margin-top: 10px;
     outline: none;
+    overflow: auto;
+}
+
+.bold#output {
+    font-weight: bold;
+}
+
+.italic#output {
+    font-style: italic;
+}
+
+#output.underline {
+    text-decoration: underline;
 }
